@@ -1,0 +1,183 @@
+@import url(adminRoot.css);
+@import url(adminGlobal.css);
+
+.container .navbar {
+  padding: 15px;
+  background-color: var(--navBG);
+  display: flex;
+  flex-direction: column;
+  font-size: var(--text);
+  font-weight: var(--fontWeight3);
+  border-radius: 10px;
+  min-height: calc(100vh - 80px);
+}
+
+.container .navbar > a,
+.container .navbar #dropdown-div .dropdown-btn {
+  padding: 15px 22px;
+  text-decoration: none;
+  color: var(--navText);
+  width: 260px;
+  border-radius: 7px;
+  margin-top: 5px;
+}
+.container .navbar #dropdown-div .dropdown-container {
+  display: none;
+  flex-direction: column;
+  font-size: var(--textSmall);
+  margin-left: auto;
+  width: 85%;
+}
+.container .navbar #dropdown-div .dropdown-container a {
+  text-decoration: none;
+  color: var(--navText);
+  padding: 15px 22px;
+  width: 100%;
+  border-radius: 7px;
+  margin-top: 5px;
+}
+.container .navbar #dropdown-div .dropdown-btn {
+  border: none;
+  text-align: left;
+  font-size: var(--text);
+  font-weight: var(--fontWeight3);
+  font-family: var(--fontFamily);
+  background: none;
+  position: relative;
+}
+
+.container .navbar a:hover,
+.container .navbar a.active,
+.container .navbar #dropdown-div .dropdown-btn:hover,
+.container .navbar #dropdown-div .dropdown-container a:hover,
+.container .navbar #dropdown-div .dropdown-container a.active {
+  background-color: var(--navHover);
+  color: var(--textHover);
+}
+
+#icon-change {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+@media screen and (max-width: 992px) and (min-width: 616px) {
+  /* Navigation */
+  .container .navbar {
+    margin: 0 auto;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    max-width: 900px;
+    width: 100%;
+    padding: 5px;
+    min-height: 0;
+  }
+  .container .navbar #dropdown-div {
+    border-radius: 15px 15px 0 0;
+    position: relative;
+  }
+  .container .navbar a i,
+  .container .navbar #dropdown-div .dropdown-btn i:first-child {
+    display: none;
+  }
+
+  .container .navbar > a,
+  .container .navbar #dropdown-div .dropdown-btn {
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 0px;
+    width: 150px;
+    padding: 8px 5px;
+    font-size: var(--textSmall);
+  }
+  .container .navbar #dropdown-div .dropdown-container {
+    border-radius: 0 0 15px 15px;
+    background-color: #c7ccdf;
+    margin-left: 0;
+    text-align: center;
+    position: absolute;
+    width: 150px;
+  }
+  .container .navbar #dropdown-div .dropdown-container a {
+    padding: 8px 5px;
+    width: 150px;
+    border-radius: 15px;
+    margin-top: 5px;
+  }
+
+  #icon-change {
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: translate(0%, 0%);
+  }
+}
+
+@media screen and (max-width: 616px) {
+  /* Navigation */
+
+  .container .navbar {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    padding: 5px;
+    min-height: 0;
+    overflow-x: scroll;
+  }
+  .container .openedDropdown {
+    height: 150px;
+    margin-bottom: -106px;
+    z-index: 2;
+  }
+  .container .navbar #dropdown-div {
+    border-radius: 15px;
+    position: relative;
+  }
+  .container .navbar a i,
+  .container .navbar #dropdown-div .dropdown-btn i:first-child {
+    display: none;
+  }
+  .container .navbar > a {
+    margin-right: 10px;
+  }
+  .container .navbar > a,
+  .container .navbar #dropdown-div .dropdown-btn {
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 0px;
+    max-width: 150px;
+    width: 150px;
+    min-width: 150px;
+    padding: 8px 5px;
+    font-size: var(--textSmall);
+    height: 38px;
+  }
+  .container .navbar #dropdown-div .dropdown-container {
+    border-radius: 0 0 15px 15px;
+    background-color: #c7ccdf;
+    margin-left: 0;
+    text-align: center;
+    position: absolute;
+    width: 150px;
+  }
+  .container .navbar #dropdown-div .dropdown-container a {
+    padding: 8px 5px;
+    width: 150px;
+    border-radius: 15px;
+    margin-top: 5px;
+  }
+
+  #icon-change {
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: translate(0%, 0%);
+  }
+}

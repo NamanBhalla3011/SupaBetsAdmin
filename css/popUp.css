@@ -1,0 +1,119 @@
+@import url(adminRoot.css);
+body {
+  position: relative;
+}
+.add-overlay {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  background-color: #00000090;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+/* Add new */
+.add-overlay > .add-new-retailer {
+  display: none;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--fontColor3);
+  padding: 50px 80px 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  border-radius: 10px;
+}
+.add-overlay .add-new-retailer img {
+  height: 25px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.add-overlay .add-new-retailer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-overlay .add-new-retailer form input {
+  width: 260px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #00000060;
+  padding: 10px;
+  font-size: var(--subHeading);
+  margin-top: 20px;
+}
+
+.add-overlay .add-new-retailer form input[type="submit"] {
+  height: 40px;
+  background-color: var(--btnColor2);
+  width: var(--buttonWidth);
+  color: var(--textHover);
+  font-size: var(--subHeading);
+  border: none;
+  border-radius: 5px;
+  margin: 20px auto 0;
+}
+
+/* Sucessful */
+.successful-overlay {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  background-color: #00000090;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.successful-overlay > .successful {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--fontColor3);
+  padding: 50px 80px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.successful-overlay .successful img {
+  height: 50px;
+}
+.successful-overlay .successful h3 {
+  padding: 20px 0;
+}
+
+.successful-overlay .successful form input[type="submit"] {
+  height: 40px;
+  background-color: var(--btnColor2);
+  width: var(--buttonWidth);
+  color: var(--textHover);
+  font-size: var(--subHeading);
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 616px) {
+  @import url(adminRoot.css);
+
+  /* Add new */
+  .add-overlay > .add-new-retailer {
+    padding: 40px 20px;
+  }
+  .add-overlay .add-new-retailer img {
+    height: 20px;
+  }
+
+  .successful-overlay > .successful {
+    padding: 40px 40px;
+  }
+}

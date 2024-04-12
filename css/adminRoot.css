@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* background */
+  --bgColor1: black;
+  /* Fonts */
+  --fontFamily: "Poppins", "-apple-system", "BlinkMacSystemFont", "Roboto",
+    "Helvetica Neue", "sans-serif";
+  --Mainheading: 25px;
+  --MainHeading2: 22px;
+  --MainHeading3: 19px;
+  --subHeading: 16px;
+  --text: 14px;
+  --textSmall: 12px;
+  --fontColor: #333;
+  --fontColor2: #43465f;
+  --fontColor3: #fff;
+  --fontWeight1: 900;
+  --fontWeight2: 700;
+  --fontWeight3: 600;
+
+  /* Navigation Colors */
+  --navBG: #f4f6fe;
+  --navHover: #43465f;
+  /* Nav Text Color */
+  --navText: #767676;
+  --textHover: #f4f6fe;
+
+  /* Div Borders */
+  --borderColor: #f1f1f1;
+  --borderColor2: #aaa;
+  /* Buttons */
+  --btnColor1: #0ba3f7;
+  --btnColor2: #19406d;
+  /* Button Hover */
+  --btnHover1: #0686cb;
+  --btnHover2: #49709a;
+
+  /* extras */
+  --failColor: #d92109;
+  --successColor: #2e862d;
+  /* Hover */
+  --failColorHover: #b01c09;
+  --successColorHover: #066A04;
+  /* button Size */
+  --buttonHeight: 50px;
+  --buttonWidth: 180px;
+
+  /* Padding & Margins */
+  --padding: 0;
+  --margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--fontFamily);
+}
+body {
+  font-family: var(--fontFamily);
+}
+
+@media screen and (max-width: 616px) {
+  :root {
+    --Mainheading: 22px;
+    --MainHeading2: 18px;
+    --subHeading: 15px;
+  }
+}

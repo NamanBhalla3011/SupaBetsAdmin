@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reconciliation Report</title>
+    <link rel="stylesheet" href="css/adminStyles.css" />
+    <link rel="stylesheet" href="css/navigation.css" />
+    <link rel="stylesheet" href="css/table.css" />
+    <link rel="shortcut icon" href="images/Logo.jpeg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="images/Logo.jpeg" alt="SupaBets" />
+
+        <div class="dropdown">
+          <i class="fa-solid fa-user" onclick="logout()"></i>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">Logout</a>
+          </div>
+        </div>
+      </header>
+      <div class="flex">
+        <!-- Navigation -->
+        <div class="navbar" id="navigations">
+          <a href="dashboard.html" class="">
+            <i
+              class="fa-solid fa-house"
+              style="font-size: 16px; margin-right: 16px"
+            ></i>
+            Dashboard</a
+          >
+          <a href="manageRetailStore.html" class=""
+            ><i
+              class="fa-solid fa-store"
+              style="font-size: 16px; margin-right: 16px"
+            ></i>
+            Manage Retail Store</a
+          >
+          <!-- <a href="manageAgents.html" class=""
+            ><i
+              class="fa-solid fa-user-group"
+              style="font-size: 16px; margin-right: 16px"
+            ></i>
+            Manage Agents</a
+          > -->
+          <div id="dropdown-div">
+            <button class="dropdown-btn">
+              <i
+                class="fa-solid fa-file"
+                style="font-size: 16px; margin-right: 16px"
+              ></i>
+              Reports
+              <i class="fa-solid fa-chevron-down" id="icon-change"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="voucherRedemptionReport.html"
+                >Voucher Redemption Report</a
+              >
+              <a href="reconciliationReport.html" class="active"
+                >Reconciliation Report</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Content -->
+        <div class="content">
+          <h2>Reconciliation Report</h2>
+          <div class="manage">
+            <div class="row flex">
+              <div class="search-bar">
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Search by ID/Name"
+                />
+                <!-- Idhar -->
+                <img src="images/search-line-icon.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="filters-row flex">
+              <div class="col">
+                <label for="fromDate">From</label>
+                <input type="date" name="" id="fromDate" />
+              </div>
+              <div class="col">
+                <label for="toDate">To</label>
+                <input type="date" name="" id="toDate" />
+              </div>
+              <div class="col flex">
+                <input type="submit" value="Apply" class="apply-btn" />
+                <input type="submit" value="Reset" class="reset-btn" />
+                <div class="download-option">
+                  <input type="submit" value="Download" class="download-btn" />
+                  <img src="images/download-file-icon-svg.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="total-table">
+            <table style="border-spacing: 0px">
+              <tr>
+                <th>Total Records</th>
+                <td>02</td>
+              </tr>
+              <tr>
+                <th>Total Amount</th>
+                <td>R7,000</td>
+              </tr>
+            </table>
+          </div>
+          <div class="data-table">
+            <table style="border-spacing: 0px" class="report-table">
+              <tr>
+                <th>Batch ID</th>
+                <th>Agent ID</th>
+                <th>Agent Name</th>
+                <th>Date</th>
+                <th>No. of Vouchers</th>
+                <th>Total Amount</th>
+              </tr>
+              <tr>
+                <td>B101</td>
+                <td>101</td>
+                <td>Jack</td>
+                <td>05-04-2024</td>
+                <td><a href="vouchers.html">9</a></td>
+                <td>R3,000</td>
+              </tr>
+              <tr>
+                <td>B101</td>
+                <td>101</td>
+                <td>Jack</td>
+                <td>05-04-2024</td>
+                <td><a href="vouchers.html">9</a></td>
+                <td>R3,000</td>
+              </tr>
+              <tr>
+                <td>B101</td>
+                <td>101</td>
+                <td>Jack</td>
+                <td>05-04-2024</td>
+                <td><a href="vouchers.html">9</a></td>
+                <td>R3,000</td>
+              </tr>
+            </table>
+          </div>
+          <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a class="active" href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let dropdown = document.getElementsByClassName("dropdown-btn");
+      let dropdownDiv = document.getElementById("dropdown-div");
+      let i;
+      let navbar1 = document.getElementById("navigations");
+      let iconChange = document.getElementById("icon-change");
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          let dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "flex") {
+            dropdownContent.style.display = "none";
+            iconChange.classList.remove("fa-chevron-up");
+            iconChange.classList.add("fa-chevron-down");
+            navbar1.classList.remove("openedDropdown");
+            dropdownDiv.style.backgroundColor = "#f4f6fe";
+          } else {
+            dropdownContent.style.display = "flex";
+            iconChange.classList.remove("fa-chevron-down");
+            iconChange.classList.add("fa-chevron-up");
+            navbar1.classList.add("openedDropdown");
+            dropdownDiv.style.backgroundColor = "#c7ccdf";
+          }
+        });
+      }
+
+      //   Logout
+      function logout() {
+        let content = document.getElementById("myDropdown");
+        if (content.style.display == "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>

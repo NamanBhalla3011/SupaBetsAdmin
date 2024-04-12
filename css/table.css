@@ -1,0 +1,169 @@
+@import url(adminRoot.css);
+
+.container .flex .content .data-table {
+  overflow: auto;
+  border-radius: 15px 15px 0 0;
+}
+.container .flex .content .data-table .report-table {
+  width: 100%;
+}
+.container .flex .content .data-table .report-table th {
+  background-color: var(--btnColor2);
+  color: var(--fontColor3);
+}
+.container
+  .content
+  .data-found
+  .transactions
+  .report-table
+  tr:nth-child(odd)
+  td {
+  background-color: aliceblue;
+}
+
+.container .flex .content .data-table .report-table th,
+.container .flex .content .data-table .report-table tr,
+.container .flex .content .data-table .report-table tr td {
+  text-align: center;
+  border-bottom: 1px solid var(--btnColor2);
+  border-collapse: collapse;
+  margin: 0;
+  padding: 8px 10px;
+  font-size: 15px;
+  width: max-content;
+}
+.container .flex .content .data-table .report-table tr td img {
+  height: 20px;
+}
+.container
+  .flex
+  .content
+  .data-table
+  .report-table
+  tr
+  td:last-child
+  a:nth-child(1) {
+  margin-right: 10px;
+}
+
+/* total-table */
+.total-table {
+  padding: 0 0 40px 0;
+  width: max-content;
+}
+.total-table table {
+  background-color: var(--navBG);
+  border: 1px solid var(--btnColor2);
+  border-radius: 10px;
+}
+.total-table table tr th,
+.total-table table tr td {
+  width: 130px;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--btnColor2);
+}
+.total-table table tr:last-child th,
+.total-table table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Pagination */
+.container .flex .content .pagination {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.container .flex .content .pagination a {
+  color: var(--fontColor);
+  padding: 4px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: var(--textSmall);
+}
+
+.container .flex .content .pagination a.active {
+  background-color: var(--btnColor2);
+  color: var(--fontColor3);
+}
+.container .flex .content .pagination a:hover:not(.active) {
+  background-color: var(--btnColor1);
+  color: var(--fontColor3);
+}
+
+/* Agent Update Table */
+.container .flex .content .manage .agent-update-table table tr td {
+  width: 200px;
+  padding: 10px 10px;
+}
+.container .flex .content .manage .agent-update-table table tr td input,
+.container .flex .content .manage .agent-update-table table tr td select {
+  padding: 5px 8px;
+  height: 40px;
+  width: 260px;
+  font-size: var(--subHeading);
+  border-radius: 10px;
+  border: 1px solid #00000050;
+}
+
+.container
+  .flex
+  .content
+  .manage
+  .agent-update-table
+  table
+  tr
+  td
+  input[type="submit"] {
+  padding: 5px 8px;
+  height: 40px;
+  width: 180px;
+  background-color: var(--btnColor1);
+  font-size: var(--subHeading);
+  color: var(--fontColor3);
+  border-radius: 10px;
+  border: none;
+}
+.container
+  .flex
+  .content
+  .manage
+  .agent-update-table
+  table
+  tr
+  td
+  input[type="submit"]:hover {
+  background-color: var(--btnHover1);
+}
+
+@media screen and (max-width: 616px) {
+  /* Table */
+  .container .flex .content .data-table {
+    border-radius: 10px;
+  }
+  .container .flex .content .data-table .report-table {
+    border-radius: 10px;
+  }
+  .container .flex .content .data-table .report-table th,
+  .container .flex .content .data-table .report-table tr,
+  .container .flex .content .data-table .report-table tr td {
+    padding: 15px 15px;
+    font-size: var(--textSmall);
+  }
+  .container .flex .content .data-table .report-table tr td:last-child {
+    min-width: 80px;
+  }
+
+  /* total-table */
+  .total-table {
+    padding: 0 0 30px 0;
+    width: 260px;
+    margin: 0 auto;
+  }
+  .total-table table tr th,
+  .total-table table tr td {
+    width: 130px;
+    padding: 5px;
+    border: 1px solid var(--btnColor2);
+  }
+}

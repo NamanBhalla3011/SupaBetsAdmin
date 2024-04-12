@@ -1,0 +1,78 @@
+.right-align {
+  text-align: right;
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.container header {
+  position: relative;
+  z-index: 2;
+  background-color: var(--bgColor1);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 50px;
+}
+.container header img {
+  height: 80px;
+}
+.container header .user {
+  position: relative;
+}
+.container header .fa-solid.fa-user {
+  color: white;
+  font-size: var(--MainHeading2);
+  cursor: pointer;
+}
+.container header .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.container header .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--navBG);
+  /* min-width: 160px; */
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+  right: 0;
+  border-radius: 5px;
+}
+
+.container header .dropdown .dropdown-content a {
+  color: var(--fontColor2);
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.container header .dropdown a:hover {
+  background-color: var(--navHover);
+  color: var(--fontColor3);
+}
+
+.container header .show {
+  display: block;
+}
+
+button, input[type="submit"]{
+  font-weight: var(--fontWeight3);
+}
+@media screen and (max-width: 544px) {
+  .container header img {
+    height: 50px;
+  }
+}
