@@ -93,14 +93,14 @@
 
 /* Agent Update Table */
 .container .flex .content .manage .agent-update-table table tr td {
-  width: 200px;
   padding: 10px 10px;
 }
 .container .flex .content .manage .agent-update-table table tr td input,
 .container .flex .content .manage .agent-update-table table tr td select {
   padding: 5px 8px;
   height: 40px;
-  width: 260px;
+  max-width: 260px;
+  width: 100%;
   font-size: var(--subHeading);
   border-radius: 10px;
   border: 1px solid #00000050;
@@ -117,7 +117,8 @@
   input[type="submit"] {
   padding: 5px 8px;
   height: 40px;
-  width: 180px;
+  max-width: 180px;
+  width: 100%;
   background-color: var(--btnColor1);
   font-size: var(--subHeading);
   color: var(--fontColor3);
@@ -165,5 +166,30 @@
     width: 130px;
     padding: 5px;
     border: 1px solid var(--btnColor2);
+  }
+
+  /* Agent Update Table */
+  .container .flex .content .manage .agent-update-table table {
+    margin: 0 auto;
+  }
+  .container .flex .content .manage .agent-update-table table tr td {
+    padding: 5px 5px;
+  }
+  .container .flex .content .manage .agent-update-table table tr td input,
+  .container .flex .content .manage .agent-update-table table tr td select {
+    padding: 5px 8px;
+  }
+
+  .container
+    .flex
+    .content
+    .manage
+    .agent-update-table
+    table
+    tr
+    td
+    input[type="submit"] {
+    max-width: 260px;
+    margin-top: 10px;
   }
 }
