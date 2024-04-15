@@ -35,16 +35,6 @@
 .container .flex .content .data-table .report-table tr td img {
   height: 20px;
 }
-.container
-  .flex
-  .content
-  .data-table
-  .report-table
-  tr
-  td:last-child
-  a:nth-child(1) {
-  margin-right: 10px;
-}
 
 /* total-table */
 .total-table {

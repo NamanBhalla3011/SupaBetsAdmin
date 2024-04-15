@@ -1,9 +1,9 @@
 <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 123 123" width="123" height="123">
 	<title>arrow-left-icon-svg</title>
 	<style>
-		.s0 { fill: #ffffff } 
+		.s0 { fill: #0ba3f7 } 
 	</style>
 	<g id="Layer">
-		<path id="Layer" class="s0" d="m0 61.2l63.7 61.2v-39.4h59.2v-43.6h-59.2v-39.4l-63.7 61.2z"/>
+		<path id="Layer" class="s0" d="m0 61.2l63.7 61.2v-39.4h59.2v-43.6h-59.2v-39.4z"/>
 	</g>
 </svg>

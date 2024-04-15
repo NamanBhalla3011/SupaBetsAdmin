@@ -86,7 +86,8 @@
                 <a href="manageRetailStore.html">
                   <input type="submit" value="Go Back" name="" id=""
                 /></a>
-                <img src="images/arrow-left-icon.svg" alt="" class="back" />
+                <!-- <img src="images/arrow-left-icon.svg" alt="" class="back" /> -->
+                <i class="fa-solid fa-arrow-left back"></i>
               </div>
 
               <div class="add-btn">
@@ -144,6 +145,9 @@
                     <input type="checkbox" checked />
                     <span class="slider"></span>
                   </label>
+                  <a onclick="resetPass()" style="cursor: pointer"
+                    ><img src="images/change-password-icon.svg" alt=""
+                  /></a>
                 </td>
               </tr>
               <tr>
@@ -159,6 +163,9 @@
                     <input type="checkbox" checked />
                     <span class="slider"></span>
                   </label>
+                  <a onclick="resetPass()" style="cursor: pointer"
+                    ><img src="images/change-password-icon.svg" alt=""
+                  /></a>
                 </td>
               </tr>
               <tr>
@@ -167,11 +174,16 @@
                 <td>jack@gamil.com</td>
                 <td>7345235678</td>
                 <td>
-                  <a href=""><img src="images/edit-box-icon.svg" alt="" /></a>
+                  <a href="updateAgentDetails.html"
+                    ><img src="images/edit-box-icon.svg" alt=""
+                  /></a>
                   <label class="switch">
                     <input type="checkbox" checked />
                     <span class="slider"></span>
                   </label>
+                  <a onclick="resetPass()" style="cursor: pointer"
+                    ><img src="images/change-password-icon.svg" alt=""
+                  /></a>
                 </td>
               </tr>
               <tr>
@@ -180,11 +192,16 @@
                 <td>jack@gamil.com</td>
                 <td>7345235678</td>
                 <td>
-                  <a href=""><img src="images/edit-box-icon.svg" alt="" /></a>
+                  <a href="updateAgentDetails.html"
+                    ><img src="images/edit-box-icon.svg" alt=""
+                  /></a>
                   <label class="switch">
                     <input type="checkbox" checked />
                     <span class="slider"></span>
                   </label>
+                  <a onclick="resetPass()" style="cursor: pointer"
+                    ><img src="images/change-password-icon.svg" alt=""
+                  /></a>
                 </td>
               </tr>
               <tr>
@@ -193,11 +210,16 @@
                 <td>jack@gamil.com</td>
                 <td>7345235678</td>
                 <td>
-                  <a href=""><img src="images/edit-box-icon.svg" alt="" /></a>
+                  <a href="updateAgentDetails.html"
+                    ><img src="images/edit-box-icon.svg" alt=""
+                  /></a>
                   <label class="switch">
                     <input type="checkbox" checked />
                     <span class="slider"></span>
                   </label>
+                  <a onclick="resetPass()" style="cursor: pointer"
+                    ><img src="images/change-password-icon.svg" alt=""
+                  /></a>
                 </td>
               </tr>
             </table>
@@ -220,7 +242,7 @@
       <!-- Add Retailer -->
       <div class="add-new-retailer" id="add-retail-store">
         <img src="images/close-line-icon.svg" alt="" onclick="closePopUp()" />
-        <h2>Add New Retail Store</h2>
+        <h2>Add New Agent</h2>
         <form action="">
           <input
             type="text"
@@ -229,6 +251,16 @@
             required
           /><input type="Email" id="" required placeholder="Email" />
           <input type="tel" id="" required placeholder="Contact Number" />
+          <div class="password-div">
+            <input
+              type="password"
+              name=""
+              id="password-field"
+              placeholder="Password"
+              required
+            />
+            <i class="fa-solid fa-eye" id="eye-icon" onclick="showHide()"></i>
+          </div>
           <input type="submit" value="Save" onclick="successfulPopUp()" />
         </form>
       </div>
@@ -238,6 +270,43 @@
       <div class="successful">
         <img src="images/check-mark-circle-line-icon.svg" alt="" />
         <h3>Agent Added Successfully</h3>
+        <form action="">
+          <input type="submit" value="Close" onclick="closePopUp()" />
+        </form>
+      </div>
+    </div>
+    <div class="reset-overlay" id="reset-overlay">
+      <!-- Reset Password -->
+      <div class="reset-agent-password" id="reset-agent-password">
+        <img src="images/close-line-icon.svg" alt="" onclick="closePopUp()" />
+        <h2>Reset Agent's Password</h2>
+        <form action="">
+          <input
+            type="Email"
+            id=""
+            required
+            placeholder="Jack@gmail.com"
+            disabled
+          />
+          <div class="password-div2">
+            <input
+              type="password"
+              name=""
+              id="password-field2"
+              placeholder="Password"
+              required
+            />
+            <i class="fa-solid fa-eye" id="eye-icon2" onclick="showHide2()"></i>
+          </div>
+          <input type="submit" value="Save" onclick="passwordUpdatedPopUp()" />
+        </form>
+      </div>
+    </div>
+    <div class="password-updated-overlay" id="password-updated-overlay">
+      <!-- Successful -->
+      <div class="updated">
+        <img src="images/check-mark-circle-line-icon.svg" alt="" />
+        <h3>Password Updated Successfully</h3>
         <form action="">
           <input type="submit" value="Close" onclick="closePopUp()" />
         </form>
@@ -280,11 +349,31 @@
         let successOverlay = document.getElementById("successful-overlay");
         successOverlay.style.display = "block";
       }
+
+      function resetPass() {
+        let formOverlay = document.getElementById("reset-overlay");
+        formOverlay.style.display = "block";
+      }
+      function passwordUpdatedPopUp() {
+        let formOverlay = document.getElementById("reset-overlay");
+        formOverlay.style.display = "none";
+        let successOverlay = document.getElementById(
+          "password-updated-overlay"
+        );
+        successOverlay.style.display = "block";
+      }
+
       function closePopUp() {
         let formOverlay = document.getElementById("add-overlay");
         formOverlay.style.display = "none";
         let successOverlay = document.getElementById("successful-overlay");
         successOverlay.style.display = "none";
+        let resetPassword = document.getElementById("reset-overlay");
+        resetPassword.style.display = "none";
+        let passwordUpdated = document.getElementById(
+          "password-updated-overlay"
+        );
+        passwordUpdated.style.display = "none";
       }
 
       //   Logout
@@ -294,6 +383,32 @@
           content.style.display = "none";
         } else {
           content.style.display = "block";
+        }
+      }
+      function showHide() {
+        let field = document.getElementById("password-field");
+        let icon = document.getElementById("eye-icon");
+        if (field.type == "password") {
+          icon.classList.remove("fa-eye");
+          icon.classList.add("fa-eye-slash");
+          field.type = "text";
+        } else {
+          icon.classList.add("fa-eye");
+          icon.classList.remove("fa-eye-slash");
+          field.type = "password";
+        }
+      }
+      function showHide2() {
+        let field = document.getElementById("password-field2");
+        let icon = document.getElementById("eye-icon2");
+        if (field.type == "password") {
+          icon.classList.remove("fa-eye");
+          icon.classList.add("fa-eye-slash");
+          field.type = "text";
+        } else {
+          icon.classList.add("fa-eye");
+          icon.classList.remove("fa-eye-slash");
+          field.type = "password";
         }
       }
     </script>

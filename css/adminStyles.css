@@ -73,26 +73,42 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.container .flex .content .manage .row.flex .search-bar img.back{
+.container .flex .content .manage .row.flex .search-bar i.back {
   position: absolute;
-  height: 20px;
+  color: var(--btnColor1);
   left: 20px;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.container .flex .content .manage .row.flex .search-bar input[type="submit"]{
+.container
+  .flex
+  .content
+  .manage
+  .row.flex
+  .search-bar
+  input[type="submit"]:hover
+  + i.back:hover {
+  color: var(--btnHover1);
+}
+.container .flex .content .manage .row.flex .search-bar input[type="submit"] {
   padding: 5px 8px;
   height: 40px;
   width: 180px;
-  background-color: var(--btnColor1);
+  border: 1px solid var(--btnColor1);
   font-size: var(--subHeading);
-  color: var(--fontColor3);
+  color: var(--btnColor1);
   border-radius: 10px;
-  border: none;
+  background-color: var(--fontColor3);
 }
-.container .flex .content .manage .row.flex .search-bar input[type="submit"]:hover{
-  
-  background-color: var(--btnHover1);
+.container
+  .flex
+  .content
+  .manage
+  .row.flex
+  .search-bar
+  input[type="submit"]:hover {
+  border: 1px solid var(--btnHover1);
+  color: var(--btnHover1);
 }
 .container .flex .content .manage .row.flex .search-bar input {
   padding: 5px 8px;
@@ -107,11 +123,11 @@
   position: relative;
 }
 .container .flex .content .manage .row.flex .add-btn img {
-  height: 25px;
+  height: 15px;
   position: absolute;
-  right: 0px;
+  left: 15%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(0%, -50%);
 }
 
 .container .flex .content .manage .row.flex .add-btn input[type="submit"] {
@@ -229,8 +245,9 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 40px;
-  height: 25px;
+  width: 28px;
+  height: 22px;
+  margin: 0 5px;
 }
 
 .switch input {
@@ -255,8 +272,8 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 21px;
-  width: 20px;
+  height: 17px;
+  width: 15px;
   left: 0px;
   bottom: 0px;
   background-color: var(--btnColor2);
@@ -274,9 +291,14 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(20px);
-  -ms-transform: translateX(20px);
-  transform: translateX(20px);
+  -webkit-transform: translateX(12px);
+  -ms-transform: translateX(12px);
+  transform: translateX(12px);
+}
+/* Update Agent Details */
+.container .flex .content .manage .agent-update-table {
+  display: flex;
+  justify-content: flex-start;
 }
 
 /* End */
@@ -290,22 +312,38 @@ input:checked + .slider:before {
   .container .flex .content .row.flex {
     justify-content: center;
   }
-  .container .flex .content .manage .row.flex .search-bar img.back{
+  .container .flex .content .manage > .row.flex {
+    justify-content: center;
+  }
+  .container .flex .content .manage .row.flex .search-bar i.back {
     position: absolute;
-    height: 20px;
     left: 20px;
     top: 50%;
     transform: translate(-50%, -50%);
   }
-  .container .flex .content .manage .row.flex .search-bar input[type="submit"]{
-    padding: 5px 8px;
-    height: 40px;
-    width: 180px;
-    background-color: var(--btnColor1);
-    font-size: var(--subHeading);
-    color: var(--fontColor3);
-    border-radius: 10px;
-    border: none;
+  /* Update Agent Details */
+  .container .flex .content .manage .agent-update-table {
+    justify-content: center;
+  }
+  .container
+    .flex
+    .content
+    .manage
+    .agent-update-table
+    table
+    tr
+    td:first-child {
+    text-align: left;
+  }
+  .container
+    .flex
+    .content
+    .manage
+    .agent-update-table
+    table
+    tr:last-child
+    td:first-child {
+    text-align: center;
   }
 }
 
@@ -319,6 +357,7 @@ input:checked + .slider:before {
   .container .flex .content .row.flex {
     justify-content: center;
   }
+
   .container .flex .content .manage .row.flex .add-btn img {
     right: 20px;
   }
@@ -333,7 +372,7 @@ input:checked + .slider:before {
   .container .flex .content .manage .row.flex .search-bar {
     margin: 0 auto;
   }
-  .container .flex .content .manage .row.flex .search-bar input[type="submit"]{
+  .container .flex .content .manage .row.flex .search-bar input[type="submit"] {
     width: 260px;
   }
 
@@ -357,16 +396,10 @@ input:checked + .slider:before {
     display: block;
     width: 100%;
   }
-  .container
-    .flex
-    .content
-    .manage
-    .filters-row.flex
-    .col
-    .download-option{
-      width:260px;
-      margin: 0 auto;
-    }
+  .container .flex .content .manage .filters-row.flex .col .download-option {
+    width: 260px;
+    margin: 0 auto;
+  }
 
   .container .flex .content .manage .filters-row.flex .col label {
     display: block;
@@ -381,5 +414,30 @@ input:checked + .slider:before {
   .container .flex .content .manage .filters-row.flex .col:last-child input {
     display: block;
     margin: 20px auto 0;
+  }
+
+  /* Update Agent Details */
+  .container .flex .content .manage .agent-update-table {
+    justify-content: center;
+  }
+  .container
+    .flex
+    .content
+    .manage
+    .agent-update-table
+    table
+    tr
+    td:first-child {
+    text-align: left;
+  }
+  .container
+    .flex
+    .content
+    .manage
+    .agent-update-table
+    table
+    tr:last-child
+    td:first-child {
+    text-align: center;
   }
 }

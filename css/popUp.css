@@ -2,7 +2,8 @@
 body {
   position: relative;
 }
-.add-overlay {
+.add-overlay,
+.reset-overlay {
   display: none;
   height: 100vh;
   width: 100vw;
@@ -12,7 +13,8 @@ body {
   z-index: 2;
 }
 /* Add new */
-.add-overlay > .add-new-retailer {
+.add-overlay > .add-new-retailer,
+.reset-overlay > .reset-agent-password {
   display: none;
   position: absolute;
   display: flex;
@@ -26,19 +28,47 @@ body {
   text-align: center;
   border-radius: 10px;
 }
-.add-overlay .add-new-retailer img {
+.add-overlay .add-new-retailer img,
+.reset-overlay .reset-agent-password img {
   height: 25px;
   position: absolute;
   top: 20px;
   right: 20px;
   cursor: pointer;
 }
-.add-overlay .add-new-retailer form {
+.add-overlay .add-new-retailer form,
+.reset-overlay .reset-agent-password form {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
-.add-overlay .add-new-retailer form input {
+.add-overlay .add-new-retailer form .password-div,
+.reset-overlay .reset-agent-password form .password-div2 {
+  position: relative;
+  margin-top: 20px;
+}
+.add-overlay .add-new-retailer form .password-div input,
+.reset-overlay .reset-agent-password form .password-div2 input {
+  margin-top: 0;
+}
+
+.add-overlay .add-new-retailer form .password-div .fa-solid.fa-eye,
+.add-overlay .add-new-retailer form .password-div .fa-solid.fa-eye-slash,
+.reset-overlay .reset-agent-password form .password-div2 .fa-solid.fa-eye,
+.reset-overlay
+  .reset-agent-password
+  form
+  .password-div2
+  .fa-solid.fa-eye-slash {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+.add-overlay .add-new-retailer form input,
+.reset-overlay .reset-agent-password form input {
   width: 260px;
   height: 40px;
   border-radius: 10px;
@@ -48,7 +78,8 @@ body {
   margin-top: 20px;
 }
 
-.add-overlay .add-new-retailer form input[type="submit"] {
+.add-overlay .add-new-retailer form input[type="submit"],
+.reset-overlay .reset-agent-password form input[type="submit"] {
   height: 40px;
   background-color: var(--btnColor2);
   width: var(--buttonWidth);
@@ -60,7 +91,8 @@ body {
 }
 
 /* Sucessful */
-.successful-overlay {
+.successful-overlay,
+.password-updated-overlay {
   display: none;
   height: 100vh;
   width: 100vw;
@@ -70,7 +102,8 @@ body {
   z-index: 2;
 }
 
-.successful-overlay > .successful {
+.successful-overlay > .successful,
+.password-updated-overlay > .updated {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -84,14 +117,17 @@ body {
   border-radius: 10px;
 }
 
-.successful-overlay .successful img {
+.successful-overlay .successful img,
+.password-updated-overlay > .updated img {
   height: 50px;
 }
-.successful-overlay .successful h3 {
+.successful-overlay .successful h3,
+.password-updated-overlay > .updated h3 {
   padding: 20px 0;
 }
 
-.successful-overlay .successful form input[type="submit"] {
+.successful-overlay .successful form input[type="submit"],
+.password-updated-overlay > .updated form input[type="submit"] {
   height: 40px;
   background-color: var(--btnColor2);
   width: var(--buttonWidth);
@@ -106,14 +142,17 @@ body {
   @import url(adminRoot.css);
 
   /* Add new */
-  .add-overlay > .add-new-retailer {
+  .add-overlay > .add-new-retailer,
+  .reset-overlay > .reset-agent-password {
     padding: 40px 20px;
   }
-  .add-overlay .add-new-retailer img {
+  .add-overlay .add-new-retailer img,
+  .reset-overlay > .reset-agent-password img {
     height: 20px;
   }
 
-  .successful-overlay > .successful {
+  .successful-overlay > .successful,
+  .password-updated-overlay > .updated {
     padding: 40px 40px;
   }
 }
